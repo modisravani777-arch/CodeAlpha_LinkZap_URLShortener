@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkZap - URL Shortener</title>
+  <meta name="description" content="LinkZap — a premium, lightning-fast URL shortener built for Code Alpha interns.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="blob shape-1"></div>
+  <div class="blob shape-2"></div>
+  <div class="blob shape-3"></div>
+  
+  <div class="container glass-panel">
+    <header>
+      <div class="logo">
+        <svg fill="currentColor" viewBox="0 0 24 24" class="icon"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        <h1>LinkZap</h1>
+        <span class="logo-badge">⚡ v1</span>
+      </div>
+      <p class="subtitle">Zap your long links into lightning-fast short ones.</p>
+    </header>
+
+    <main>
+      <form id="shortenForm">
+        <div class="input-group">
+          <input type="url" id="urlInput" placeholder="https://your-long-url.com/goes/here" required autocomplete="off">
+          <button type="submit" id="submitBtn">
+            <span>⚡ Shorten</span>
+            <div class="spinner hidden" id="spinner"></div>
+          </button>
+        </div>
+        <p class="error-msg" id="errorMsg"></p>
+      </form>
+
+      <div class="result-area hidden" id="resultArea">
+        <p>Your compressed link is ready!</p>
+        <div class="short-link-box">
+          <a href="#" target="_blank" id="shortUrl">http://localhost:3000/xyz123</a>
+          <button class="copy-btn" id="copyBtn" title="Copy to clipboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
